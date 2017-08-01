@@ -72,14 +72,11 @@
 			//清除按键响应动画
 			function removeTransition(event) {
 				if (event.propertyName !== 'transform') return; //event.propertyName返回元素变化了的属性的名称
-				event.target.classList.remove("playing");
+				event.target.classList.remove("playing");	//清除动画
 			}
 			
 			const keys = Array.from(document.querySelectorAll(".key"));		//获取所有动画元素
 			keys.forEach(key => key.addEventListener('transitionend', removeTransition));  //监听动画结束事件transitionend，并清除动画的class
-			
-			
-			
 		</script>
 	</body>
 </html>
